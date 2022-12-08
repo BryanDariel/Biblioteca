@@ -165,6 +165,7 @@ namespace WindowsFormsApp1
             dgvAsignacion.DataSource = Estudiantes;
 
             txtEstudiante.Clear();
+            txtMatricula.Clear();
             txtTel.Clear();
             txtLibro1.Clear();
             txtLibro2.Clear();
