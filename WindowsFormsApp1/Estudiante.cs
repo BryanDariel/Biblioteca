@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         public int ID { get; set; }
         public string Matricula { get; set; }
         public string Nombre { get; set; }
-        public string[] Telefono { get; set; }
+        public string Telefono { get; set; }
         public int Id_Libro1 { get; set; }
         public int Id_Libro2{ get; set; }
         public int Id_Libro3 { get; set; }

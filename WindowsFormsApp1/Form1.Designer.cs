@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tc1 = new System.Windows.Forms.TabControl();
             this.tabAsignacion = new System.Windows.Forms.TabPage();
             this.btnModificarEstudiante = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             this.txtTel = new System.Windows.Forms.TextBox();
             this.lbTel = new System.Windows.Forms.Label();
             this.txtLibro3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLibro2 = new System.Windows.Forms.TextBox();
             this.txtLibro1 = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtEstudiante = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             this.lbMatricula = new System.Windows.Forms.Label();
             this.lbEstudiante = new System.Windows.Forms.Label();
             this.tpAlmacen = new System.Windows.Forms.TabPage();
+            this.btnModificarLibro = new System.Windows.Forms.Button();
             this.dgvAlmacen = new System.Windows.Forms.DataGridView();
             this.btnBuscarLibro = new System.Windows.Forms.Button();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
@@ -63,7 +65,7 @@
             this.txtID_Estudiante = new System.Windows.Forms.TextBox();
             this.lbID_LibroHistorico = new System.Windows.Forms.Label();
             this.lbMatricula_EstudianteHistorico = new System.Windows.Forms.Label();
-            this.btnModificarLibro = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tc1.SuspendLayout();
             this.tabAsignacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -71,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).BeginInit();
             this.tbHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tc1
@@ -93,7 +96,7 @@
             this.tabAsignacion.Controls.Add(this.txtTel);
             this.tabAsignacion.Controls.Add(this.lbTel);
             this.tabAsignacion.Controls.Add(this.txtLibro3);
-            this.tabAsignacion.Controls.Add(this.textBox4);
+            this.tabAsignacion.Controls.Add(this.txtLibro2);
             this.tabAsignacion.Controls.Add(this.txtLibro1);
             this.tabAsignacion.Controls.Add(this.txtMatricula);
             this.tabAsignacion.Controls.Add(this.txtEstudiante);
@@ -112,9 +115,9 @@
             // 
             // btnModificarEstudiante
             // 
-            this.btnModificarEstudiante.Location = new System.Drawing.Point(381, 64);
+            this.btnModificarEstudiante.Location = new System.Drawing.Point(367, 46);
             this.btnModificarEstudiante.Name = "btnModificarEstudiante";
-            this.btnModificarEstudiante.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarEstudiante.Size = new System.Drawing.Size(89, 23);
             this.btnModificarEstudiante.TabIndex = 31;
             this.btnModificarEstudiante.Text = "Modificar";
             this.btnModificarEstudiante.UseVisualStyleBackColor = true;
@@ -131,19 +134,20 @@
             // 
             // btnAgregarEstudiante
             // 
-            this.btnAgregarEstudiante.Location = new System.Drawing.Point(381, 15);
+            this.btnAgregarEstudiante.Location = new System.Drawing.Point(367, 15);
             this.btnAgregarEstudiante.Name = "btnAgregarEstudiante";
-            this.btnAgregarEstudiante.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarEstudiante.Size = new System.Drawing.Size(89, 23);
             this.btnAgregarEstudiante.TabIndex = 29;
             this.btnAgregarEstudiante.Text = "Agregar";
             this.btnAgregarEstudiante.UseVisualStyleBackColor = true;
+            this.btnAgregarEstudiante.Click += new System.EventHandler(this.btnAgregarEstudiante_Click);
             // 
             // dgvAsignacion
             // 
             this.dgvAsignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignacion.Location = new System.Drawing.Point(12, 205);
+            this.dgvAsignacion.Location = new System.Drawing.Point(3, 205);
             this.dgvAsignacion.Name = "dgvAsignacion";
-            this.dgvAsignacion.Size = new System.Drawing.Size(739, 274);
+            this.dgvAsignacion.Size = new System.Drawing.Size(748, 274);
             this.dgvAsignacion.TabIndex = 28;
             // 
             // txtTel
@@ -169,12 +173,12 @@
             this.txtLibro3.Size = new System.Drawing.Size(250, 20);
             this.txtLibro3.TabIndex = 25;
             // 
-            // textBox4
+            // txtLibro2
             // 
-            this.textBox4.Location = new System.Drawing.Point(73, 130);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 20);
-            this.textBox4.TabIndex = 24;
+            this.txtLibro2.Location = new System.Drawing.Point(73, 130);
+            this.txtLibro2.Name = "txtLibro2";
+            this.txtLibro2.Size = new System.Drawing.Size(250, 20);
+            this.txtLibro2.TabIndex = 24;
             // 
             // txtLibro1
             // 
@@ -261,6 +265,15 @@
             this.tpAlmacen.Text = "Almacen";
             this.tpAlmacen.UseVisualStyleBackColor = true;
             // 
+            // btnModificarLibro
+            // 
+            this.btnModificarLibro.Location = new System.Drawing.Point(371, 57);
+            this.btnModificarLibro.Name = "btnModificarLibro";
+            this.btnModificarLibro.Size = new System.Drawing.Size(91, 23);
+            this.btnModificarLibro.TabIndex = 36;
+            this.btnModificarLibro.Text = "Modificar";
+            this.btnModificarLibro.UseVisualStyleBackColor = true;
+            // 
             // dgvAlmacen
             // 
             this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -286,6 +299,7 @@
             this.btnAgregarLibro.TabIndex = 33;
             this.btnAgregarLibro.Text = "Agregar";
             this.btnAgregarLibro.UseVisualStyleBackColor = true;
+            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
             // txtCategoriaLibro
             // 
@@ -353,7 +367,7 @@
             // 
             // btnBuscarHistorico
             // 
-            this.btnBuscarHistorico.Location = new System.Drawing.Point(415, 19);
+            this.btnBuscarHistorico.Location = new System.Drawing.Point(391, 22);
             this.btnBuscarHistorico.Name = "btnBuscarHistorico";
             this.btnBuscarHistorico.Size = new System.Drawing.Size(91, 23);
             this.btnBuscarHistorico.TabIndex = 34;
@@ -400,20 +414,15 @@
             this.lbMatricula_EstudianteHistorico.TabIndex = 23;
             this.lbMatricula_EstudianteHistorico.Text = "Matricula";
             // 
-            // btnModificarLibro
+            // errorProvider1
             // 
-            this.btnModificarLibro.Location = new System.Drawing.Point(371, 57);
-            this.btnModificarLibro.Name = "btnModificarLibro";
-            this.btnModificarLibro.Size = new System.Drawing.Size(91, 23);
-            this.btnModificarLibro.TabIndex = 36;
-            this.btnModificarLibro.Text = "Modificar";
-            this.btnModificarLibro.UseVisualStyleBackColor = true;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Biblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 522);
+            this.ClientSize = new System.Drawing.Size(764, 514);
             this.Controls.Add(this.tc1);
             this.Name = "Biblioteca";
             this.Text = "Biblioteca";
@@ -428,6 +437,7 @@
             this.tbHistorico.ResumeLayout(false);
             this.tbHistorico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,7 +452,7 @@
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label lbTel;
         private System.Windows.Forms.TextBox txtLibro3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLibro2;
         private System.Windows.Forms.TextBox txtLibro1;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox txtEstudiante;
@@ -470,6 +480,7 @@
         private System.Windows.Forms.Button btnBuscarHistorico;
         private System.Windows.Forms.Button btnModificarEstudiante;
         private System.Windows.Forms.Button btnModificarLibro;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

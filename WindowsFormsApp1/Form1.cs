@@ -1,5 +1,6 @@
 ﻿using LiteDB;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class Biblioteca : Form
     {
+        ArrayList Estudiantes = new ArrayList();
         public Biblioteca()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace WindowsFormsApp1
                 {
                     Nombre = "Bryan Rondon",
                     Matricula = "2020-0368",
-                    Telefono = new string[] { "809-523-1784" },
+                    Telefono = "809-523-1784",
                     Id_Libro1 = 3,
                     Id_Libro2 = 0,
                     Id_Libro3 = 0,
@@ -92,5 +94,112 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnAgregarEstudiante_Click(object sender, EventArgs e)
+        {
+
+            ValidarCamposAsignacion();
+        }
+        private bool ValidarCamposAsignacion()
+        {
+            //ErrorProvider de NombreEstudiante
+            if (txtEstudiante.Text == "")
+            {
+                errorProvider1.SetError(txtEstudiante, "Debe ingresar el nombre del estudiante.");
+                txtEstudiante.Focus();
+                return false;
+            }
+            errorProvider1.SetError(txtEstudiante, "");
+
+            //ErrorProvider de MatriculaEstudiante
+            if (txtMatricula.Text == "")
+            {
+                errorProvider1.SetError(txtMatricula, "Debe ingresar la matricula del estudiante.");
+                txtMatricula.Focus();
+                return false;
+            }
+            errorProvider1.SetError(txtMatricula, "");
+
+            int Libro1;
+            if(!int.TryParse(txtLibro1.Text, out Libro1))
+            {
+                errorProvider1.SetError(txtLibro1, "Debe ingresar el ID del libro.");
+                txtLibro1.Focus();
+                return false;
+            }
+
+            int Libro2;
+            if (!int.TryParse(txtLibro2.Text, out Libro2))
+            {
+                errorProvider1.SetError(txtLibro2, "Debe ingresar el ID del libro.");
+                txtLibro2.Focus();
+                return false;
+            }
+
+            int Libro3;
+            if (!int.TryParse(txtLibro3.Text, out Libro3))
+            {
+                errorProvider1.SetError(txtLibro3, "Debe ingresar el ID del libro.");
+                txtLibro3.Focus();
+                return false;
+            }
+
+            Estudiante miEstudiante = new Estudiante();
+            miEstudiante.Matricula = txtMatricula.Text;
+            miEstudiante.Nombre = txtEstudiante.Text;
+            miEstudiante.Telefono = txtTel.Text;
+            miEstudiante.Id_Libro1 = Libro1;
+            miEstudiante.Id_Libro2 = Libro2;
+            miEstudiante.Id_Libro3 = Libro3;
+            Estudiantes.Add(miEstudiante);
+
+            dgvAsignacion.DataSource = null;
+            dgvAsignacion.DataSource = Estudiantes;
+
+            txtEstudiante.Clear();
+            txtTel.Clear();
+            txtLibro1.Clear();
+            txtLibro2.Clear();
+            txtLibro3.Clear();
+        }
+
+        private void btnAgregarLibro_Click(object sender, EventArgs e)
+        {
+            ValidarCamposAlmacen();
+        }
+
+        private bool ValidarCamposAlmacen()
+        {
+            //ErrorProvider de ID_Libro
+            int ID_Libro1;
+            if (!int.TryParse(txtID_LibroAlmacen.Text, out ID_Libro1))
+            {
+                errorProvider1.SetError(txtID_LibroAlmacen, "Debe ingresar el ID del libro.");
+                txtID_LibroAlmacen.Focus();
+                return false;
+            }
+            errorProvider1.SetError(txtID_LibroAlmacen, "");
+
+            //ErrorProvider de TituloLibro
+            if (txtTituloLibro.Text == "")
+            {
+                errorProvider1.SetError(txtTituloLibro, "Debe ingresar el titulo del libro.");
+                txtTituloLibro.Focus();
+                return false;
+            }
+            errorProvider1.SetError(txtTituloLibro, "");
+
+            //ErrorProvider de CategoriaLibro
+            if (txtCategoriaLibro.Text == "")
+            {
+                errorProvider1.SetError(txtCategoriaLibro, "Debe ingresar la categoria del libro.");
+                txtCategoriaLibro.Focus();
+                return false;
+            }
+            errorProvider1.SetError(txtCategoriaLibro, "");
+
+            return true;
+        }
+
     }
 }
