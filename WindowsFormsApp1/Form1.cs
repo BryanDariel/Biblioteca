@@ -136,6 +136,13 @@ namespace WindowsFormsApp1
             }
             errorProvider1.SetError(txtLibro1, "");
 
+            if (Existe(Libro1))
+            {
+                errorProvider1.SetError(txtLibro1, "Esta ID pertenece a ningun libro guardado en el Almacen.");
+                txtLibro1.Focus();
+                return;
+            }
+
             int Libro2;
             if (!int.TryParse(txtLibro2.Text, out Libro2))
             {
@@ -174,6 +181,15 @@ namespace WindowsFormsApp1
             txtLibro3.Clear();
 
             return;
+        }
+
+        private bool Existe(int libro1)
+        {
+            foreach (Estudiante miEstudiante in Estudiantes)
+            {
+                if (miEstudiante.Id_Libro1 == lbID_LibroAlmacen.Text) return true;
+            }
+            return false;
         }
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)

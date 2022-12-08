@@ -48,10 +48,10 @@
             this.lbMatricula = new System.Windows.Forms.Label();
             this.lbEstudiante = new System.Windows.Forms.Label();
             this.tpAlmacen = new System.Windows.Forms.TabPage();
-            this.btnModificarLibro = new System.Windows.Forms.Button();
+            this.btnModificarAlmacen = new System.Windows.Forms.Button();
             this.dgvAlmacen = new System.Windows.Forms.DataGridView();
-            this.btnBuscarLibro = new System.Windows.Forms.Button();
-            this.btnAgregarLibro = new System.Windows.Forms.Button();
+            this.btnBuscarAlmacen = new System.Windows.Forms.Button();
+            this.btnAgregarAlmacen = new System.Windows.Forms.Button();
             this.txtCategoriaAlmacen = new System.Windows.Forms.TextBox();
             this.lbCategoriaLibro = new System.Windows.Forms.Label();
             this.txtTituloAlmacen = new System.Windows.Forms.TextBox();
@@ -66,6 +66,7 @@
             this.lbID_LibroHistorico = new System.Windows.Forms.Label();
             this.lbMatricula_EstudianteHistorico = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnEliminarAlmacen = new System.Windows.Forms.Button();
             this.tabAlmacen.SuspendLayout();
             this.tabAsignacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
@@ -144,9 +145,9 @@
             // dgvAsignacion
             // 
             this.dgvAsignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsignacion.Location = new System.Drawing.Point(3, 205);
+            this.dgvAsignacion.Location = new System.Drawing.Point(7, 200);
             this.dgvAsignacion.Name = "dgvAsignacion";
-            this.dgvAsignacion.Size = new System.Drawing.Size(748, 274);
+            this.dgvAsignacion.Size = new System.Drawing.Size(740, 279);
             this.dgvAsignacion.TabIndex = 28;
             // 
             // txtTel
@@ -247,10 +248,11 @@
             // 
             // tpAlmacen
             // 
-            this.tpAlmacen.Controls.Add(this.btnModificarLibro);
+            this.tpAlmacen.Controls.Add(this.btnEliminarAlmacen);
+            this.tpAlmacen.Controls.Add(this.btnModificarAlmacen);
             this.tpAlmacen.Controls.Add(this.dgvAlmacen);
-            this.tpAlmacen.Controls.Add(this.btnBuscarLibro);
-            this.tpAlmacen.Controls.Add(this.btnAgregarLibro);
+            this.tpAlmacen.Controls.Add(this.btnBuscarAlmacen);
+            this.tpAlmacen.Controls.Add(this.btnAgregarAlmacen);
             this.tpAlmacen.Controls.Add(this.txtCategoriaAlmacen);
             this.tpAlmacen.Controls.Add(this.lbCategoriaLibro);
             this.tpAlmacen.Controls.Add(this.txtTituloAlmacen);
@@ -264,41 +266,41 @@
             this.tpAlmacen.Text = "Almacen";
             this.tpAlmacen.UseVisualStyleBackColor = true;
             // 
-            // btnModificarLibro
+            // btnModificarAlmacen
             // 
-            this.btnModificarLibro.Location = new System.Drawing.Point(371, 57);
-            this.btnModificarLibro.Name = "btnModificarLibro";
-            this.btnModificarLibro.Size = new System.Drawing.Size(91, 23);
-            this.btnModificarLibro.TabIndex = 36;
-            this.btnModificarLibro.Text = "Modificar";
-            this.btnModificarLibro.UseVisualStyleBackColor = true;
+            this.btnModificarAlmacen.Location = new System.Drawing.Point(371, 57);
+            this.btnModificarAlmacen.Name = "btnModificarAlmacen";
+            this.btnModificarAlmacen.Size = new System.Drawing.Size(91, 23);
+            this.btnModificarAlmacen.TabIndex = 36;
+            this.btnModificarAlmacen.Text = "Modificar";
+            this.btnModificarAlmacen.UseVisualStyleBackColor = true;
             // 
             // dgvAlmacen
             // 
             this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlmacen.Location = new System.Drawing.Point(7, 179);
+            this.dgvAlmacen.Location = new System.Drawing.Point(7, 177);
             this.dgvAlmacen.Name = "dgvAlmacen";
             this.dgvAlmacen.Size = new System.Drawing.Size(743, 302);
             this.dgvAlmacen.TabIndex = 35;
             // 
-            // btnBuscarLibro
+            // btnBuscarAlmacen
             // 
-            this.btnBuscarLibro.Location = new System.Drawing.Point(487, 20);
-            this.btnBuscarLibro.Name = "btnBuscarLibro";
-            this.btnBuscarLibro.Size = new System.Drawing.Size(91, 23);
-            this.btnBuscarLibro.TabIndex = 34;
-            this.btnBuscarLibro.Text = "Buscar";
-            this.btnBuscarLibro.UseVisualStyleBackColor = true;
+            this.btnBuscarAlmacen.Location = new System.Drawing.Point(487, 20);
+            this.btnBuscarAlmacen.Name = "btnBuscarAlmacen";
+            this.btnBuscarAlmacen.Size = new System.Drawing.Size(91, 23);
+            this.btnBuscarAlmacen.TabIndex = 34;
+            this.btnBuscarAlmacen.Text = "Buscar";
+            this.btnBuscarAlmacen.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarLibro
+            // btnAgregarAlmacen
             // 
-            this.btnAgregarLibro.Location = new System.Drawing.Point(371, 18);
-            this.btnAgregarLibro.Name = "btnAgregarLibro";
-            this.btnAgregarLibro.Size = new System.Drawing.Size(91, 23);
-            this.btnAgregarLibro.TabIndex = 33;
-            this.btnAgregarLibro.Text = "Agregar";
-            this.btnAgregarLibro.UseVisualStyleBackColor = true;
-            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
+            this.btnAgregarAlmacen.Location = new System.Drawing.Point(371, 18);
+            this.btnAgregarAlmacen.Name = "btnAgregarAlmacen";
+            this.btnAgregarAlmacen.Size = new System.Drawing.Size(91, 23);
+            this.btnAgregarAlmacen.TabIndex = 33;
+            this.btnAgregarAlmacen.Text = "Agregar";
+            this.btnAgregarAlmacen.UseVisualStyleBackColor = true;
+            this.btnAgregarAlmacen.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
             // txtCategoriaAlmacen
             // 
@@ -376,7 +378,7 @@
             // dgvHistorico
             // 
             this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorico.Location = new System.Drawing.Point(9, 181);
+            this.dgvHistorico.Location = new System.Drawing.Point(9, 177);
             this.dgvHistorico.Name = "dgvHistorico";
             this.dgvHistorico.Size = new System.Drawing.Size(743, 302);
             this.dgvHistorico.TabIndex = 27;
@@ -416,6 +418,15 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // btnEliminarAlmacen
+            // 
+            this.btnEliminarAlmacen.Location = new System.Drawing.Point(487, 57);
+            this.btnEliminarAlmacen.Name = "btnEliminarAlmacen";
+            this.btnEliminarAlmacen.Size = new System.Drawing.Size(91, 23);
+            this.btnEliminarAlmacen.TabIndex = 37;
+            this.btnEliminarAlmacen.Text = "Eliminar";
+            this.btnEliminarAlmacen.UseVisualStyleBackColor = true;
             // 
             // Biblioteca
             // 
@@ -473,13 +484,14 @@
         private System.Windows.Forms.Label lbTituloLibro;
         private System.Windows.Forms.TextBox txtCategoriaAlmacen;
         private System.Windows.Forms.Label lbCategoriaLibro;
-        private System.Windows.Forms.Button btnAgregarLibro;
-        private System.Windows.Forms.Button btnBuscarLibro;
+        private System.Windows.Forms.Button btnAgregarAlmacen;
+        private System.Windows.Forms.Button btnBuscarAlmacen;
         private System.Windows.Forms.DataGridView dgvAlmacen;
         private System.Windows.Forms.Button btnBuscarHistorico;
         private System.Windows.Forms.Button btnModificarEstudiante;
-        private System.Windows.Forms.Button btnModificarLibro;
+        private System.Windows.Forms.Button btnModificarAlmacen;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnEliminarAlmacen;
     }
 }
 
