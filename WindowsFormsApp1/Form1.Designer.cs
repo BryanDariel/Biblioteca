@@ -33,7 +33,7 @@
             this.btnModificarEstudiante = new System.Windows.Forms.Button();
             this.btnBuscarEstudiante = new System.Windows.Forms.Button();
             this.btnAgregarEstudiante = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAsignacion = new System.Windows.Forms.DataGridView();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.lbTel = new System.Windows.Forms.Label();
             this.txtLibro3 = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.lbMatricula = new System.Windows.Forms.Label();
             this.lbEstudiante = new System.Windows.Forms.Label();
             this.tpAlmacen = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvAlmacen = new System.Windows.Forms.DataGridView();
             this.btnBuscarLibro = new System.Windows.Forms.Button();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
             this.txtCategoriaLibro = new System.Windows.Forms.TextBox();
@@ -56,9 +56,9 @@
             this.lbTituloLibro = new System.Windows.Forms.Label();
             this.txtID_LibroAlmacen = new System.Windows.Forms.TextBox();
             this.lbID_LibroAlmacen = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbHistorico = new System.Windows.Forms.TabPage();
             this.btnBuscarHistorico = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvHistorico = new System.Windows.Forms.DataGridView();
             this.txtID_Libro = new System.Windows.Forms.TextBox();
             this.txtID_Estudiante = new System.Windows.Forms.TextBox();
             this.lbID_LibroHistorico = new System.Windows.Forms.Label();
@@ -66,18 +66,18 @@
             this.btnModificarLibro = new System.Windows.Forms.Button();
             this.tc1.SuspendLayout();
             this.tabAsignacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             this.tpAlmacen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).BeginInit();
+            this.tbHistorico.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             this.SuspendLayout();
             // 
             // tc1
             // 
             this.tc1.Controls.Add(this.tabAsignacion);
             this.tc1.Controls.Add(this.tpAlmacen);
-            this.tc1.Controls.Add(this.tabPage2);
+            this.tc1.Controls.Add(this.tbHistorico);
             this.tc1.Location = new System.Drawing.Point(1, 1);
             this.tc1.Name = "tc1";
             this.tc1.SelectedIndex = 0;
@@ -89,7 +89,7 @@
             this.tabAsignacion.Controls.Add(this.btnModificarEstudiante);
             this.tabAsignacion.Controls.Add(this.btnBuscarEstudiante);
             this.tabAsignacion.Controls.Add(this.btnAgregarEstudiante);
-            this.tabAsignacion.Controls.Add(this.dataGridView1);
+            this.tabAsignacion.Controls.Add(this.dgvAsignacion);
             this.tabAsignacion.Controls.Add(this.txtTel);
             this.tabAsignacion.Controls.Add(this.lbTel);
             this.tabAsignacion.Controls.Add(this.txtLibro3);
@@ -138,13 +138,13 @@
             this.btnAgregarEstudiante.Text = "Agregar";
             this.btnAgregarEstudiante.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvAsignacion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 205);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(739, 274);
-            this.dataGridView1.TabIndex = 28;
+            this.dgvAsignacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsignacion.Location = new System.Drawing.Point(12, 205);
+            this.dgvAsignacion.Name = "dgvAsignacion";
+            this.dgvAsignacion.Size = new System.Drawing.Size(739, 274);
+            this.dgvAsignacion.TabIndex = 28;
             // 
             // txtTel
             // 
@@ -164,7 +164,7 @@
             // 
             // txtLibro3
             // 
-            this.txtLibro3.Location = new System.Drawing.Point(73, 156);
+            this.txtLibro3.Location = new System.Drawing.Point(74, 161);
             this.txtLibro3.Name = "txtLibro3";
             this.txtLibro3.Size = new System.Drawing.Size(250, 20);
             this.txtLibro3.TabIndex = 25;
@@ -200,7 +200,7 @@
             // lbLibro3
             // 
             this.lbLibro3.AutoSize = true;
-            this.lbLibro3.Location = new System.Drawing.Point(9, 159);
+            this.lbLibro3.Location = new System.Drawing.Point(10, 164);
             this.lbLibro3.Name = "lbLibro3";
             this.lbLibro3.Size = new System.Drawing.Size(36, 13);
             this.lbLibro3.TabIndex = 20;
@@ -245,7 +245,7 @@
             // tpAlmacen
             // 
             this.tpAlmacen.Controls.Add(this.btnModificarLibro);
-            this.tpAlmacen.Controls.Add(this.dataGridView3);
+            this.tpAlmacen.Controls.Add(this.dgvAlmacen);
             this.tpAlmacen.Controls.Add(this.btnBuscarLibro);
             this.tpAlmacen.Controls.Add(this.btnAgregarLibro);
             this.tpAlmacen.Controls.Add(this.txtCategoriaLibro);
@@ -261,13 +261,13 @@
             this.tpAlmacen.Text = "Almacen";
             this.tpAlmacen.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dgvAlmacen
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(7, 179);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(743, 302);
-            this.dataGridView3.TabIndex = 35;
+            this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlmacen.Location = new System.Drawing.Point(7, 179);
+            this.dgvAlmacen.Name = "dgvAlmacen";
+            this.dgvAlmacen.Size = new System.Drawing.Size(743, 302);
+            this.dgvAlmacen.TabIndex = 35;
             // 
             // btnBuscarLibro
             // 
@@ -335,21 +335,21 @@
             this.lbID_LibroAlmacen.TabIndex = 27;
             this.lbID_LibroAlmacen.Text = "ID Libro";
             // 
-            // tabPage2
+            // tbHistorico
             // 
-            this.tabPage2.Controls.Add(this.btnBuscarHistorico);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Controls.Add(this.txtID_Libro);
-            this.tabPage2.Controls.Add(this.txtID_Estudiante);
-            this.tabPage2.Controls.Add(this.lbID_LibroHistorico);
-            this.tabPage2.Controls.Add(this.lbMatricula_EstudianteHistorico);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(765, 496);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Historico";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbHistorico.Controls.Add(this.btnBuscarHistorico);
+            this.tbHistorico.Controls.Add(this.dgvHistorico);
+            this.tbHistorico.Controls.Add(this.txtID_Libro);
+            this.tbHistorico.Controls.Add(this.txtID_Estudiante);
+            this.tbHistorico.Controls.Add(this.lbID_LibroHistorico);
+            this.tbHistorico.Controls.Add(this.lbMatricula_EstudianteHistorico);
+            this.tbHistorico.Location = new System.Drawing.Point(4, 22);
+            this.tbHistorico.Name = "tbHistorico";
+            this.tbHistorico.Padding = new System.Windows.Forms.Padding(3);
+            this.tbHistorico.Size = new System.Drawing.Size(765, 496);
+            this.tbHistorico.TabIndex = 1;
+            this.tbHistorico.Text = "Historico";
+            this.tbHistorico.UseVisualStyleBackColor = true;
             // 
             // btnBuscarHistorico
             // 
@@ -360,13 +360,13 @@
             this.btnBuscarHistorico.Text = "Buscar";
             this.btnBuscarHistorico.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgvHistorico
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(9, 181);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(743, 298);
-            this.dataGridView2.TabIndex = 27;
+            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorico.Location = new System.Drawing.Point(9, 181);
+            this.dgvHistorico.Name = "dgvHistorico";
+            this.dgvHistorico.Size = new System.Drawing.Size(743, 298);
+            this.dgvHistorico.TabIndex = 27;
             // 
             // txtID_Libro
             // 
@@ -413,7 +413,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 522);
+            this.ClientSize = new System.Drawing.Size(771, 522);
             this.Controls.Add(this.tc1);
             this.Name = "Biblioteca";
             this.Text = "Biblioteca";
@@ -421,13 +421,13 @@
             this.tc1.ResumeLayout(false);
             this.tabAsignacion.ResumeLayout(false);
             this.tabAsignacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).EndInit();
             this.tpAlmacen.ResumeLayout(false);
             this.tpAlmacen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).EndInit();
+            this.tbHistorico.ResumeLayout(false);
+            this.tbHistorico.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -436,9 +436,9 @@
 
         private System.Windows.Forms.TabControl tc1;
         private System.Windows.Forms.TabPage tabAsignacion;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbHistorico;
         private System.Windows.Forms.Button btnAgregarEstudiante;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAsignacion;
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label lbTel;
         private System.Windows.Forms.TextBox txtLibro3;
@@ -455,7 +455,7 @@
         private System.Windows.Forms.TextBox txtID_Estudiante;
         private System.Windows.Forms.Label lbID_LibroHistorico;
         private System.Windows.Forms.Label lbMatricula_EstudianteHistorico;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvHistorico;
         private System.Windows.Forms.Button btnBuscarEstudiante;
         private System.Windows.Forms.TabPage tpAlmacen;
         private System.Windows.Forms.TextBox txtID_LibroAlmacen;
@@ -466,7 +466,7 @@
         private System.Windows.Forms.Label lbCategoriaLibro;
         private System.Windows.Forms.Button btnAgregarLibro;
         private System.Windows.Forms.Button btnBuscarLibro;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvAlmacen;
         private System.Windows.Forms.Button btnBuscarHistorico;
         private System.Windows.Forms.Button btnModificarEstudiante;
         private System.Windows.Forms.Button btnModificarLibro;
