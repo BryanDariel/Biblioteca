@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
     public partial class Biblioteca : Form
     {
         List <Estudiante> Estudiantes = new List<Estudiante>();
+        List <Libro> Libros = new List<Libro>();
+        List <Historico> Historicos = new List<Historico>();
         public Biblioteca()
         {
             InitializeComponent();
@@ -179,37 +181,51 @@ namespace WindowsFormsApp1
             ValidarCamposAlmacen();
         }
 
-        private bool ValidarCamposAlmacen()
+        private void ValidarCamposAlmacen()
         {
             //ErrorProvider de ID_Libro
-            int ID_Libro1;
-            if (!int.TryParse(txtID_LibroAlmacen.Text, out ID_Libro1))
+            int ID_LibroAlmacen;
+            if (!int.TryParse(txtID_LibroAlmacen.Text, out ID_LibroAlmacen))
             {
                 errorProvider1.SetError(txtID_LibroAlmacen, "Debe ingresar el ID del libro.");
                 txtID_LibroAlmacen.Focus();
-                return false;
+                return;
             }
             errorProvider1.SetError(txtID_LibroAlmacen, "");
 
             //ErrorProvider de TituloLibro
-            if (txtTituloLibro.Text == "")
+            if (txtTituloAlmacen.Text == "")
             {
-                errorProvider1.SetError(txtTituloLibro, "Debe ingresar el titulo del libro.");
-                txtTituloLibro.Focus();
-                return false;
+                errorProvider1.SetError(txtTituloAlmacen, "Debe ingresar el titulo del libro.");
+                txtTituloAlmacen.Focus();
+                return;
             }
-            errorProvider1.SetError(txtTituloLibro, "");
+            errorProvider1.SetError(txtTituloAlmacen, "");
 
             //ErrorProvider de CategoriaLibro
-            if (txtCategoriaLibro.Text == "")
+            if (txtCategoriaAlmacen.Text == "")
             {
-                errorProvider1.SetError(txtCategoriaLibro, "Debe ingresar la categoria del libro.");
-                txtCategoriaLibro.Focus();
-                return false;
+                errorProvider1.SetError(txtCategoriaAlmacen, "Debe ingresar la categoria del libro.");
+                txtCategoriaAlmacen.Focus();
+                return;
             }
-            errorProvider1.SetError(txtCategoriaLibro, "");
+            errorProvider1.SetError(txtCategoriaAlmacen, "");
 
-            return true;
+            Libro miLibro = new Libro();
+            miLibro.ID_Libro = ID_LibroAlmacen;
+            miLibro.Titulo = txtTituloAlmacen.Text;
+            miLibro.Categoria = txtCategoriaAlmacen.Text;
+
+            Libros.Add(miLibro);
+
+            dgvAlmacen.DataSource = null;
+            dgvAlmacen.DataSource = Libros;
+
+            txtTituloAlmacen.Clear();
+            txtCategoriaAlmacen.Clear();
+            txtID_LibroAlmacen.Clear();
+
+            return;
         }
 
     }
