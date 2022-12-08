@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tc1 = new System.Windows.Forms.TabControl();
+            this.tabAlmacen = new System.Windows.Forms.TabControl();
             this.tabAsignacion = new System.Windows.Forms.TabPage();
             this.btnModificarEstudiante = new System.Windows.Forms.Button();
             this.btnBuscarEstudiante = new System.Windows.Forms.Button();
@@ -52,13 +52,13 @@
             this.dgvAlmacen = new System.Windows.Forms.DataGridView();
             this.btnBuscarLibro = new System.Windows.Forms.Button();
             this.btnAgregarLibro = new System.Windows.Forms.Button();
-            this.txtCategoriaLibro = new System.Windows.Forms.TextBox();
+            this.txtCategoriaAlmacen = new System.Windows.Forms.TextBox();
             this.lbCategoriaLibro = new System.Windows.Forms.Label();
-            this.txtTituloLibro = new System.Windows.Forms.TextBox();
+            this.txtTituloAlmacen = new System.Windows.Forms.TextBox();
             this.lbTituloLibro = new System.Windows.Forms.Label();
             this.txtID_LibroAlmacen = new System.Windows.Forms.TextBox();
             this.lbID_LibroAlmacen = new System.Windows.Forms.Label();
-            this.tbHistorico = new System.Windows.Forms.TabPage();
+            this.tabHistorico = new System.Windows.Forms.TabPage();
             this.btnBuscarHistorico = new System.Windows.Forms.Button();
             this.dgvHistorico = new System.Windows.Forms.DataGridView();
             this.txtID_Libro = new System.Windows.Forms.TextBox();
@@ -66,26 +66,26 @@
             this.lbID_LibroHistorico = new System.Windows.Forms.Label();
             this.lbMatricula_EstudianteHistorico = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tc1.SuspendLayout();
+            this.tabAlmacen.SuspendLayout();
             this.tabAsignacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).BeginInit();
             this.tpAlmacen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).BeginInit();
-            this.tbHistorico.SuspendLayout();
+            this.tabHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tc1
+            // tabAlmacen
             // 
-            this.tc1.Controls.Add(this.tabAsignacion);
-            this.tc1.Controls.Add(this.tpAlmacen);
-            this.tc1.Controls.Add(this.tbHistorico);
-            this.tc1.Location = new System.Drawing.Point(1, 1);
-            this.tc1.Name = "tc1";
-            this.tc1.SelectedIndex = 0;
-            this.tc1.Size = new System.Drawing.Size(773, 522);
-            this.tc1.TabIndex = 0;
+            this.tabAlmacen.Controls.Add(this.tabAsignacion);
+            this.tabAlmacen.Controls.Add(this.tpAlmacen);
+            this.tabAlmacen.Controls.Add(this.tabHistorico);
+            this.tabAlmacen.Location = new System.Drawing.Point(1, 1);
+            this.tabAlmacen.Name = "tabAlmacen";
+            this.tabAlmacen.SelectedIndex = 0;
+            this.tabAlmacen.Size = new System.Drawing.Size(773, 522);
+            this.tabAlmacen.TabIndex = 0;
             // 
             // tabAsignacion
             // 
@@ -251,9 +251,9 @@
             this.tpAlmacen.Controls.Add(this.dgvAlmacen);
             this.tpAlmacen.Controls.Add(this.btnBuscarLibro);
             this.tpAlmacen.Controls.Add(this.btnAgregarLibro);
-            this.tpAlmacen.Controls.Add(this.txtCategoriaLibro);
+            this.tpAlmacen.Controls.Add(this.txtCategoriaAlmacen);
             this.tpAlmacen.Controls.Add(this.lbCategoriaLibro);
-            this.tpAlmacen.Controls.Add(this.txtTituloLibro);
+            this.tpAlmacen.Controls.Add(this.txtTituloAlmacen);
             this.tpAlmacen.Controls.Add(this.lbTituloLibro);
             this.tpAlmacen.Controls.Add(this.txtID_LibroAlmacen);
             this.tpAlmacen.Controls.Add(this.lbID_LibroAlmacen);
@@ -300,12 +300,12 @@
             this.btnAgregarLibro.UseVisualStyleBackColor = true;
             this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
-            // txtCategoriaLibro
+            // txtCategoriaAlmacen
             // 
-            this.txtCategoriaLibro.Location = new System.Drawing.Point(81, 94);
-            this.txtCategoriaLibro.Name = "txtCategoriaLibro";
-            this.txtCategoriaLibro.Size = new System.Drawing.Size(250, 20);
-            this.txtCategoriaLibro.TabIndex = 32;
+            this.txtCategoriaAlmacen.Location = new System.Drawing.Point(81, 94);
+            this.txtCategoriaAlmacen.Name = "txtCategoriaAlmacen";
+            this.txtCategoriaAlmacen.Size = new System.Drawing.Size(250, 20);
+            this.txtCategoriaAlmacen.TabIndex = 32;
             // 
             // lbCategoriaLibro
             // 
@@ -316,12 +316,12 @@
             this.lbCategoriaLibro.TabIndex = 31;
             this.lbCategoriaLibro.Text = "Categoria";
             // 
-            // txtTituloLibro
+            // txtTituloAlmacen
             // 
-            this.txtTituloLibro.Location = new System.Drawing.Point(81, 57);
-            this.txtTituloLibro.Name = "txtTituloLibro";
-            this.txtTituloLibro.Size = new System.Drawing.Size(250, 20);
-            this.txtTituloLibro.TabIndex = 30;
+            this.txtTituloAlmacen.Location = new System.Drawing.Point(81, 57);
+            this.txtTituloAlmacen.Name = "txtTituloAlmacen";
+            this.txtTituloAlmacen.Size = new System.Drawing.Size(250, 20);
+            this.txtTituloAlmacen.TabIndex = 30;
             // 
             // lbTituloLibro
             // 
@@ -348,21 +348,21 @@
             this.lbID_LibroAlmacen.TabIndex = 27;
             this.lbID_LibroAlmacen.Text = "ID Libro";
             // 
-            // tbHistorico
+            // tabHistorico
             // 
-            this.tbHistorico.Controls.Add(this.btnBuscarHistorico);
-            this.tbHistorico.Controls.Add(this.dgvHistorico);
-            this.tbHistorico.Controls.Add(this.txtID_Libro);
-            this.tbHistorico.Controls.Add(this.txtID_Estudiante);
-            this.tbHistorico.Controls.Add(this.lbID_LibroHistorico);
-            this.tbHistorico.Controls.Add(this.lbMatricula_EstudianteHistorico);
-            this.tbHistorico.Location = new System.Drawing.Point(4, 22);
-            this.tbHistorico.Name = "tbHistorico";
-            this.tbHistorico.Padding = new System.Windows.Forms.Padding(3);
-            this.tbHistorico.Size = new System.Drawing.Size(765, 496);
-            this.tbHistorico.TabIndex = 1;
-            this.tbHistorico.Text = "Historico";
-            this.tbHistorico.UseVisualStyleBackColor = true;
+            this.tabHistorico.Controls.Add(this.btnBuscarHistorico);
+            this.tabHistorico.Controls.Add(this.dgvHistorico);
+            this.tabHistorico.Controls.Add(this.txtID_Libro);
+            this.tabHistorico.Controls.Add(this.txtID_Estudiante);
+            this.tabHistorico.Controls.Add(this.lbID_LibroHistorico);
+            this.tabHistorico.Controls.Add(this.lbMatricula_EstudianteHistorico);
+            this.tabHistorico.Location = new System.Drawing.Point(4, 22);
+            this.tabHistorico.Name = "tabHistorico";
+            this.tabHistorico.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHistorico.Size = new System.Drawing.Size(765, 496);
+            this.tabHistorico.TabIndex = 1;
+            this.tabHistorico.Text = "Historico";
+            this.tabHistorico.UseVisualStyleBackColor = true;
             // 
             // btnBuscarHistorico
             // 
@@ -422,19 +422,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 514);
-            this.Controls.Add(this.tc1);
+            this.Controls.Add(this.tabAlmacen);
             this.Name = "Biblioteca";
             this.Text = "Biblioteca";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tc1.ResumeLayout(false);
+            this.tabAlmacen.ResumeLayout(false);
             this.tabAsignacion.ResumeLayout(false);
             this.tabAsignacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacion)).EndInit();
             this.tpAlmacen.ResumeLayout(false);
             this.tpAlmacen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).EndInit();
-            this.tbHistorico.ResumeLayout(false);
-            this.tbHistorico.PerformLayout();
+            this.tabHistorico.ResumeLayout(false);
+            this.tabHistorico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -443,9 +443,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tc1;
+        private System.Windows.Forms.TabControl tabAlmacen;
         private System.Windows.Forms.TabPage tabAsignacion;
-        private System.Windows.Forms.TabPage tbHistorico;
+        private System.Windows.Forms.TabPage tabHistorico;
         private System.Windows.Forms.Button btnAgregarEstudiante;
         private System.Windows.Forms.DataGridView dgvAsignacion;
         private System.Windows.Forms.TextBox txtTel;
@@ -469,9 +469,9 @@
         private System.Windows.Forms.TabPage tpAlmacen;
         private System.Windows.Forms.TextBox txtID_LibroAlmacen;
         private System.Windows.Forms.Label lbID_LibroAlmacen;
-        private System.Windows.Forms.TextBox txtTituloLibro;
+        private System.Windows.Forms.TextBox txtTituloAlmacen;
         private System.Windows.Forms.Label lbTituloLibro;
-        private System.Windows.Forms.TextBox txtCategoriaLibro;
+        private System.Windows.Forms.TextBox txtCategoriaAlmacen;
         private System.Windows.Forms.Label lbCategoriaLibro;
         private System.Windows.Forms.Button btnAgregarLibro;
         private System.Windows.Forms.Button btnBuscarLibro;
