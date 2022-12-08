@@ -378,7 +378,7 @@
             this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorico.Location = new System.Drawing.Point(9, 181);
             this.dgvHistorico.Name = "dgvHistorico";
-            this.dgvHistorico.Size = new System.Drawing.Size(743, 298);
+            this.dgvHistorico.Size = new System.Drawing.Size(743, 302);
             this.dgvHistorico.TabIndex = 27;
             // 
             // txtID_Libro
