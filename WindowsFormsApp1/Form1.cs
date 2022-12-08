@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class Biblioteca : Form
     {
-        ArrayList Estudiantes = new ArrayList();
+        List <Estudiante> Estudiantes = new List<Estudiante>();
         public Biblioteca()
         {
             InitializeComponent();
@@ -90,11 +90,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnModificarEstudiante_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarEstudiante_Click(object sender, EventArgs e)
         {
 
@@ -102,7 +97,7 @@ namespace WindowsFormsApp1
         }
         private bool ValidarCamposAsignacion()
         {
-            //ErrorProvider de NombreEstudiante
+            //ErrorProvider de Estudiante
             if (txtEstudiante.Text == "")
             {
                 errorProvider1.SetError(txtEstudiante, "Debe ingresar el nombre del estudiante.");
@@ -111,7 +106,7 @@ namespace WindowsFormsApp1
             }
             errorProvider1.SetError(txtEstudiante, "");
 
-            //ErrorProvider de MatriculaEstudiante
+            //ErrorProvider de Matricula
             if (txtMatricula.Text == "")
             {
                 errorProvider1.SetError(txtMatricula, "Debe ingresar la matricula del estudiante.");

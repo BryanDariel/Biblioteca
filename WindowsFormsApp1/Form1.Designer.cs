@@ -121,7 +121,6 @@
             this.btnModificarEstudiante.TabIndex = 31;
             this.btnModificarEstudiante.Text = "Modificar";
             this.btnModificarEstudiante.UseVisualStyleBackColor = true;
-            this.btnModificarEstudiante.Click += new System.EventHandler(this.btnModificarEstudiante_Click);
             // 
             // btnBuscarEstudiante
             // 
