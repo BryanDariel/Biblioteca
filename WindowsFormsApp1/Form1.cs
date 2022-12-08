@@ -136,6 +136,7 @@ namespace WindowsFormsApp1
             }
             errorProvider1.SetError(txtLibro1, "");
 
+            //Verificar que el ID del libro este guardado en el Almacen
             if (Existe(Libro1))
             {
                 errorProvider1.SetError(txtLibro1, "Esta ID pertenece a ningun libro guardado en el Almacen.");
@@ -183,9 +184,10 @@ namespace WindowsFormsApp1
             return;
         }
 
+        //Ayudame papa Dio'
         private bool Existe(int libro1)
         {
-            foreach (Estudiante miEstudiante in Estudiantes)
+            foreach (Estudiante miEstudiante in Libros)
             {
                 if (miEstudiante.Id_Libro1 == lbID_LibroAlmacen.Text) return true;
             }
@@ -237,12 +239,11 @@ namespace WindowsFormsApp1
             dgvAlmacen.DataSource = null;
             dgvAlmacen.DataSource = Libros;
 
+            txtID_LibroAlmacen.Clear();
             txtTituloAlmacen.Clear();
             txtCategoriaAlmacen.Clear();
-            txtID_LibroAlmacen.Clear();
 
             return;
         }
-
     }
 }
