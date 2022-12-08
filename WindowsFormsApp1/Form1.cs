@@ -95,14 +95,15 @@ namespace WindowsFormsApp1
 
             ValidarCamposAsignacion();
         }
-        private bool ValidarCamposAsignacion()
+        private void ValidarCamposAsignacion()
         {
+
             //ErrorProvider de Estudiante
             if (txtEstudiante.Text == "")
             {
                 errorProvider1.SetError(txtEstudiante, "Debe ingresar el nombre del estudiante.");
                 txtEstudiante.Focus();
-                return false;
+                return;
             }
             errorProvider1.SetError(txtEstudiante, "");
 
@@ -111,33 +112,45 @@ namespace WindowsFormsApp1
             {
                 errorProvider1.SetError(txtMatricula, "Debe ingresar la matricula del estudiante.");
                 txtMatricula.Focus();
-                return false;
+                return;
             }
             errorProvider1.SetError(txtMatricula, "");
+
+            //ErrorProvider de Telefono
+            if (txtTel.Text == "")
+            {
+                errorProvider1.SetError(txtTel, "Debe ingresar el telefono del estudiante o un familiar.");
+                txtTel.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtTel, "");
 
             int Libro1;
             if(!int.TryParse(txtLibro1.Text, out Libro1))
             {
                 errorProvider1.SetError(txtLibro1, "Debe ingresar el ID del libro.");
                 txtLibro1.Focus();
-                return false;
+                return;
             }
+            errorProvider1.SetError(txtLibro1, "");
 
             int Libro2;
             if (!int.TryParse(txtLibro2.Text, out Libro2))
             {
                 errorProvider1.SetError(txtLibro2, "Debe ingresar el ID del libro.");
                 txtLibro2.Focus();
-                return false;
+                return;
             }
+            errorProvider1.SetError(txtLibro2, "");
 
             int Libro3;
             if (!int.TryParse(txtLibro3.Text, out Libro3))
             {
                 errorProvider1.SetError(txtLibro3, "Debe ingresar el ID del libro.");
                 txtLibro3.Focus();
-                return false;
+                return;
             }
+            errorProvider1.SetError(txtLibro3, "");
 
             Estudiante miEstudiante = new Estudiante();
             miEstudiante.Matricula = txtMatricula.Text;
@@ -156,6 +169,8 @@ namespace WindowsFormsApp1
             txtLibro1.Clear();
             txtLibro2.Clear();
             txtLibro3.Clear();
+
+            return;
         }
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)

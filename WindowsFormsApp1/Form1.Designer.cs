@@ -115,9 +115,9 @@
             // 
             // btnModificarEstudiante
             // 
-            this.btnModificarEstudiante.Location = new System.Drawing.Point(367, 46);
+            this.btnModificarEstudiante.Location = new System.Drawing.Point(367, 55);
             this.btnModificarEstudiante.Name = "btnModificarEstudiante";
-            this.btnModificarEstudiante.Size = new System.Drawing.Size(89, 23);
+            this.btnModificarEstudiante.Size = new System.Drawing.Size(91, 23);
             this.btnModificarEstudiante.TabIndex = 31;
             this.btnModificarEstudiante.Text = "Modificar";
             this.btnModificarEstudiante.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             // 
             this.btnBuscarEstudiante.Location = new System.Drawing.Point(487, 15);
             this.btnBuscarEstudiante.Name = "btnBuscarEstudiante";
-            this.btnBuscarEstudiante.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarEstudiante.Size = new System.Drawing.Size(91, 23);
             this.btnBuscarEstudiante.TabIndex = 30;
             this.btnBuscarEstudiante.Text = "Buscar";
             this.btnBuscarEstudiante.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@
             // 
             this.btnAgregarEstudiante.Location = new System.Drawing.Point(367, 15);
             this.btnAgregarEstudiante.Name = "btnAgregarEstudiante";
-            this.btnAgregarEstudiante.Size = new System.Drawing.Size(89, 23);
+            this.btnAgregarEstudiante.Size = new System.Drawing.Size(91, 23);
             this.btnAgregarEstudiante.TabIndex = 29;
             this.btnAgregarEstudiante.Text = "Agregar";
             this.btnAgregarEstudiante.UseVisualStyleBackColor = true;
